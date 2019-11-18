@@ -1,10 +1,9 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
+    <app-nav></app-nav>
   </div>
 </template>
 
@@ -23,5 +22,17 @@ export default {
 <style lang="scss">
 @import './assets/css/variable.scss'
 @import './assets/css/element-ui-modify.scss'
+
+#app {
+  font-family: "Microsoft YaHei","微软雅黑",'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $GobalFontSize;
+  text-align: center;
+  color: #2c3e50;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
 </style>
