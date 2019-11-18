@@ -3,7 +3,19 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+import './assets/css/base.css'
+import './assets/css/vue2-animate.css'
+
+Vue.use(axios,VueAxios)
+
 Vue.config.productionTip = false
+
+router.afterEach(()=>{
+	window.scrollTo(0,0);
+});
 
 new Vue({
   router,
